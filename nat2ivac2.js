@@ -22,9 +22,7 @@ request(url)
           output = output + '<path stroke_color="tracks" stroke_width="1.5">\n';
 
           for (var j = 1; j < tracks[i].length; j++) {
-
-              output = output + '<point ref="' + tracks[i][j] + '"/>\n';
-
+              output = output + '<point ref="' + tracks[i][j].replace('/','') + '"/>\n';
           }
 
           output = output + '</path>\n</map>\n'
